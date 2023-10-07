@@ -1,7 +1,18 @@
-# In the name of God
+#include <iostream>
 
-def sum_of_even_numbers(n):
-    return sum([x for x in range(1, n+1) if x % 2 == 0])
+using namespace std;
 
-n = int(input())
-print(sum_of_even_numbers(n))
+long long sumOfEvenNumbers(int n) {
+    long long returnValue = 0;
+    for (int i = 0; i <= n; i++)
+        if (i % 2 == 0) {
+            returnValue += i;
+        }
+    return returnValue;
+}
+
+int main () {
+    int n;
+    cin >> n;
+    cout << sumOfEvenNumbers(n) << endl;
+    return 0;
